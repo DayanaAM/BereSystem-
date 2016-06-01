@@ -1,0 +1,42 @@
+﻿#logo {
+	background-color: #D9ECB0;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 100px;
+}
+#menu {
+	background-color: #FFFFFF;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 50px;
+}
+#content {
+	height: 550px;
+	background-color: rgba(192,192,192,0.5);
+   
+}
+#footer {
+	background-color: #808080;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 200px;
+}
+#img{
+	background-image:url('../images/spa.jpg');
+	background-repeat: no-repeat;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 550px;
+}
+
+a {
+	text-decoration: none;
+	margin-right: 3%;
+	margin-left: 3%;
+	color: #008000;
+	font-family: "Baskerville Old Face";
+	font-size: large;
+	margin-bottom:0%;
+	margin-top:0%;
+}
+
