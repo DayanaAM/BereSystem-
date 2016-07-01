@@ -63,7 +63,9 @@
     <Content Include="images\logo.jpg" />
     <Content Include="images\spa.jpg" />
     <Content Include="View\singIn.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="View\changePassword.aspx.cs">
