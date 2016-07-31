@@ -62,12 +62,38 @@
     <Content Include="View\Default.aspx" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\spa.jpg" />
+    <Content Include="View\prueba.aspx" />
     <Content Include="View\singIn.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AccesoDatos.cs" />
+    <Compile Include="Model\ClassDB\CategoriaBD.cs" />
+    <Compile Include="Model\ClassDB\CitaBD.cs" />
+    <Compile Include="Model\ClassDB\CitaServicioBD.cs" />
+    <Compile Include="Model\ClassDB\DetalleFacturaBD.cs" />
+    <Compile Include="Model\ClassDB\DiaHoraBD.cs" />
+    <Compile Include="Model\ClassDB\EstadoBD.cs" />
+    <Compile Include="Model\ClassDB\FacturaBD.cs" />
+    <Compile Include="Model\ClassDB\HorarioBDcs.cs" />
+    <Compile Include="Model\ClassDB\ProductoBD.cs" />
+    <Compile Include="Model\ClassDB\ServicioBD.cs" />
+    <Compile Include="Model\ClassDB\TipoServicioBD.cs" />
+    <Compile Include="Model\ClassDB\ZonaTratamientoBD.cs" />
+    <Compile Include="Model\Class\Categoria.cs" />
+    <Compile Include="Model\Class\Cita.cs" />
+    <Compile Include="Model\Class\CitaServicio.cs" />
+    <Compile Include="Model\Class\DetalleFactura.cs" />
+    <Compile Include="Model\Class\DiaHora.cs" />
+    <Compile Include="Model\Class\Estado.cs" />
+    <Compile Include="Model\Class\Factura.cs" />
+    <Compile Include="Model\Class\Horario.cs" />
+    <Compile Include="Model\Class\Producto.cs" />
+    <Compile Include="Model\Class\Servicio.cs" />
+    <Compile Include="Model\Class\TipoServicio.cs" />
+    <Compile Include="Model\Class\ZonaTratamiento.cs" />
     <Compile Include="View\changePassword.aspx.cs">
       <DependentUpon>changePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,6 +116,13 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\prueba.aspx.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\prueba.aspx.designer.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\singIn.aspx.cs">
       <DependentUpon>singIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

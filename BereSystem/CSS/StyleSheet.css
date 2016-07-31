@@ -1,4 +1,19 @@
-﻿#logo {
+﻿
+#img{
+	background-image:url('../images/spa.jpg');
+	background-repeat: no-repeat;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 550px;
+}
+#prueba{
+	background-image:url('../images/spa.jpg');
+	background-repeat: no-repeat;
+	margin-right: 10%;
+	margin-left: 10%;
+	height: 550px;
+}
+#logo {
 	background-color: #D9ECB0;
 	margin-right: 10%;
 	margin-left: 10%;
@@ -13,21 +28,16 @@
 #content {
 	height: 550px;
 	background-color: rgba(192,192,192,0.5);
-   
-}
+ }
+
 #footer {
 	background-color: #808080;
 	margin-right: 10%;
 	margin-left: 10%;
 	height: 200px;
 }
-#img{
-	background-image:url('../images/spa.jpg');
-	background-repeat: no-repeat;
-	margin-right: 10%;
-	margin-left: 10%;
-	height: 550px;
-}
+
+
 
 a {
 	text-decoration: none;
@@ -39,4 +49,5 @@ a {
 	margin-bottom:0%;
 	margin-top:0%;
 }
+
 
