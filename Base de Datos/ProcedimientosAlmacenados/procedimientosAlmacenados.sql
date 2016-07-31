@@ -556,7 +556,7 @@ as
    begin try -- Declarar el Inicio del try catch 
       begin transaction;  -- Declara el Inicio de la Transacción    
 				
-	update Factura set numFactura=@pNumFactura,fecha=@pFecha,cliente=@pCliente,descuento=@pDescuento,montototal=@pMontoTotal, estado=@pEstado
+	update Factura set fecha=@pFecha,cliente=@pCliente,descuento=@pDescuento,montototal=@pMontoTotal, estado=@pEstado
 		where numFactura =@pNumFactura;
          
       commit transaction;  -- salvar la Transacción
