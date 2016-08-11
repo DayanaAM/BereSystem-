@@ -1,3 +1,4 @@
+
 use beresystem
 
 
@@ -190,6 +191,10 @@ END
 IF OBJECT_ID('dbo.pk_Factura') IS NULL
 BEGIN
 Alter table Factura add constraint pk_Factura Primary key (numFactura)
+END
+IF OBJECT_ID('dbo.pk_Dia_Hora') IS NULL
+BEGIN
+Alter table Dia_Hora add constraint pk_Dia_Hora Primary key (dia,hora)
 END
 
 

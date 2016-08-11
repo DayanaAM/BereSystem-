@@ -67,6 +67,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WebServiceBereSystem.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccesoDatos.cs" />
@@ -129,6 +130,10 @@
     </Compile>
     <Compile Include="View\singIn.aspx.designer.cs">
       <DependentUpon>singIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServiceBereSystem.asmx.cs">
+      <DependentUpon>WebServiceBereSystem.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

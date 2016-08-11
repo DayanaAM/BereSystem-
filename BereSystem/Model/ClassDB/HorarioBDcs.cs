@@ -9,7 +9,7 @@ using System.Web;
 
 namespace BereSystem.Model.ClassDB
 {
-    public class HorarioBDcs
+    public class HorarioBD
     {
 
 

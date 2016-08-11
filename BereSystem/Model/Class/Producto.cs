@@ -26,5 +26,7 @@ namespace BereSystem.Model.Class
             this.estado=estado;
             
         }
+
+       
     }
 }
