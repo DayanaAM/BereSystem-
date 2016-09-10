@@ -6,15 +6,12 @@
 	margin-left: 10%;
 	height: 550px;
 }
-#prueba{
-	background-image:url('../images/spa.jpg');
-	background-repeat: no-repeat;
-	margin-right: 10%;
-	margin-left: 10%;
+#content {
 	height: 550px;
-}
+	background-color: rgba(192,192,192,0.5);
+ }
 #logo {
-	background-color: #D9ECB0;
+	background-color:#77e349;
 	margin-right: 10%;
 	margin-left: 10%;
 	height: 100px;
@@ -25,10 +22,7 @@
 	margin-left: 10%;
 	height: 50px;
 }
-#content {
-	height: 550px;
-	background-color: rgba(192,192,192,0.5);
- }
+
 
 #footer {
 	background-color: #808080;

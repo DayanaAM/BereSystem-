@@ -5,14 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <div  id="img">
-		              <div id="content">
+    
                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
                             <asp:LoginView ID="LoginView1" runat="server" EnableTheming="True">
                         <AnonymousTemplate>
                             <p>Bienvenido, por favor introduce tus credenciales de acceso</p>
-                            <asp:Login ID="Login1" runat="server" BackColor="#F7F7DE" BorderColor="#CCCC99" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt">
+                            <asp:Login ID="Login1" runat="server" BackColor="#F7F7DE" BorderColor="#CCCC99" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt" LoginButtonText="Ingresar" PasswordLabelText="Contraseña :" RememberMeText="Recordar la próxima vez" TitleText="Registro" UserNameLabelText="Usuario :" FailureText="Su intento de acceso no tuvo éxito. Por favor, inténtelo de nuevo.">
                                 <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="#FFFFFF" />
                    
                             </asp:Login>
@@ -24,16 +23,13 @@
                                     <p>Bienvenido</p>
                                     <asp:LoginName ID="LoginName1" runat="server" Font-Size="X-Large" ForeColor="White" />
                                     <br />
-                                    <asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Large" ForeColor="White" />
+                                    <asp:LoginStatus ID="LoginStatus1" runat="server" Font-Size="Large" ForeColor="White" LoginText="Ingresar" LogoutText="Salir" />
                                     &nbsp;
                                     <asp:LinkButton ID="lnkCambioContrasenna" runat="server" Font-Size="Large" ForeColor="White" PostBackUrl="~/View/changePassword.aspx">Cambiar Contraseña</asp:LinkButton>
 	                            </div>
                         </LoggedInTemplate>
                     </asp:LoginView>
-		              </div>
-	            </div>
 
-   
 </asp:Content>
 
        

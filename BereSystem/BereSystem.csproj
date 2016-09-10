@@ -58,9 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\StyleSheet.css" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo1.jpg" />
     <Content Include="View\changePassword.aspx" />
     <Content Include="View\Default.aspx" />
-    <Content Include="images\logo.jpg" />
     <Content Include="images\spa.jpg" />
     <Content Include="View\prueba.aspx" />
     <Content Include="View\singIn.aspx" />
@@ -145,7 +146,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\ZonaAdministrador\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
