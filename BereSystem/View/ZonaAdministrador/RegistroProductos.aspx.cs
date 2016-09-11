@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BereSystem.View
+namespace BereSystem.View.ZonaAdministrador
 {
-    public partial class prueba : System.Web.UI.Page
+    public partial class RegistroProductos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

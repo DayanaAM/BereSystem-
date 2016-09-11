@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace BereSystem.View {
+namespace BereSystem.View.ZonaAdministrador {
     
     
-    public partial class prueba {
+    public partial class RegistroProductos {
     }
 }

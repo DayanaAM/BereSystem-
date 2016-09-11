@@ -60,11 +60,15 @@
     <Content Include="CSS\StyleSheet.css" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo1.jpg" />
+    <Content Include="images\logoBanner.png" />
     <Content Include="View\changePassword.aspx" />
     <Content Include="View\Default.aspx" />
     <Content Include="images\spa.jpg" />
-    <Content Include="View\prueba.aspx" />
     <Content Include="View\singIn.aspx" />
+    <Content Include="View\ZonaAdministrador\RegistroCitas.aspx" />
+    <Content Include="View\ZonaAdministrador\RegistroClientes.aspx" />
+    <Content Include="View\ZonaAdministrador\RegistroProcedimientos.aspx" />
+    <Content Include="View\ZonaAdministrador\RegistroProductos.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -118,19 +122,40 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\prueba.aspx.cs">
-      <DependentUpon>prueba.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\prueba.aspx.designer.cs">
-      <DependentUpon>prueba.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View\singIn.aspx.cs">
       <DependentUpon>singIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\singIn.aspx.designer.cs">
       <DependentUpon>singIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroCitas.aspx.cs">
+      <DependentUpon>RegistroCitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroCitas.aspx.designer.cs">
+      <DependentUpon>RegistroCitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroClientes.aspx.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroClientes.aspx.designer.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroProcedimientos.aspx.cs">
+      <DependentUpon>RegistroProcedimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroProcedimientos.aspx.designer.cs">
+      <DependentUpon>RegistroProcedimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroProductos.aspx.cs">
+      <DependentUpon>RegistroProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ZonaAdministrador\RegistroProductos.aspx.designer.cs">
+      <DependentUpon>RegistroProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebServiceBereSystem.asmx.cs">
       <DependentUpon>WebServiceBereSystem.asmx</DependentUpon>
@@ -146,9 +171,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\ZonaAdministrador\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

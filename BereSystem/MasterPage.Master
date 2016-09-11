@@ -11,17 +11,39 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div id="pagina">
 
           <div id="logo">
-              Falta cambiar por el logo original!
-		                 <img alt="Logo"  align="right"src="../images/logo.jpg"  />
+             
+		               
 	            </div>
 	            <div  id="menu">
-                    Cuando tengamos mas avanzado se hace la navegacion !!
-                    <asp:ContentPlaceHolder ID="head" runat="server">
+                        <ul class="menu">
+        				        <li><a href="../View/Default.aspx">Inicio</a></li>
+        				        <li><a href="">Procedimientos</a></li>
+        				        <li><a href="">Productos</a></li>
+        				        <li><a href="">Promociones</a></li>
+        				        <li><a href="">Citas</a></li>
+        				        <li><a href="">Cont&aacute;ctenos</a></li>
+        				        <li><a href="">Registros</a>
+        					            <ul >
+        						                <li ><a href="http://localhost:44805/View/ZonaAdministrador/RegistroClientes.aspx">Registro de Clientes</a></li>
+                                                <br></br>
+        						                <li ><a href="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx">Regitro de Procedimientos</a></li>
+                                                <br></br>
+        						                 <li><a href="http://localhost:44805/View/ZonaAdministrador/RegistroCitas.aspx">Registro de Citas</a></li>
+                                                <br></br>
+        						                <li ><a href="http://localhost:44805/View/ZonaAdministrador/RegistroProductos.aspx">Registro de Productos</a></li>
+        					            </ul>
+        				        </li>
+        				        <li><a href="">Facturaci&oacute;n</a></li>
+        				        <li><a href="">Reportes</a></li>
+        				
+                         </ul>
+
+                 <asp:ContentPlaceHolder ID="head" runat="server">
                         
-                      </asp:ContentPlaceHolder>
+                   </asp:ContentPlaceHolder>
 	            </div>
 	                        <div  id="img">
                                  <div id="content">
