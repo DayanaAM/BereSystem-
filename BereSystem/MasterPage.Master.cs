@@ -12,13 +12,19 @@ namespace BereSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Roles.IsUserInRole("administrador"))
-                {
-                    
-                }
-            else{
-         
-              }
+            if (Roles.IsUserInRole("administrador"))
+            {
+                //LinkButton link = (LinkButton)LoginView1FindControl("lnkRegistros");
+                //link.Visible = true;
+                lnkRegistros.Visible = true;
+               
+
+            }
+            else
+            {
+                lnkRegistros.Visible = false;
+
+            }
         }
     }
 }

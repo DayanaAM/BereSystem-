@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\StyleSheet.css" />
+    <Content Include="images\banner.png" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo1.jpg" />
     <Content Include="images\logoBanner.png" />

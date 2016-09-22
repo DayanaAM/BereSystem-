@@ -43,7 +43,7 @@
             margin-left:2%;
             margin-right:2%;
 		}
-.menu li ul li {
+.menu li .submenu li {
 
 	height: 25px;
     width:230px;
@@ -51,15 +51,6 @@
 
 }
 
-.menu li ul li a{
-	text-decoration: none;
-	font-family: "Agency FB";
-	font-size: 19pt;
-	color: #808080;
-	text-align:left;
-	display: block;
-}
-	
 .menu li a {
 	text-decoration: none;
 	font-family: "Agency FB";
@@ -69,6 +60,17 @@
 	display: block;
 
 }
+
+.menu li .submenu li a{
+	text-decoration: none;
+	font-family: "Agency FB";
+	font-size: 19pt;
+	color: #808080;
+	text-align:left;
+	display: block;
+}
+	
+
 .menu li a:hover {
 	text-decoration: none;
 	font-family: "Agency FB";
@@ -78,7 +80,7 @@
 	display: block;
 }
 
-.menu li ul li a:hover {
+.menu li .submenu li a:hover {
 	text-decoration: none;
 	font-family: "Agency FB";
 	font-size: 20pt;
