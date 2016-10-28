@@ -5,6 +5,7 @@ using System.Web;
 
 namespace BereSystem.Model.Class
 {
+    
     public class TipoServicio
     {
 

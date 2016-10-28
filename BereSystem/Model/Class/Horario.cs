@@ -12,6 +12,17 @@ namespace BereSystem.Model.Class
         public string nombre { get; set; }
         public int estado { get; set; }
 
+        public Estado Estado
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public Horario() { }
 
         public Horario(int codigo, string nombre, int estado)

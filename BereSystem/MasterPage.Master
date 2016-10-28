@@ -4,65 +4,68 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-      <link href="CSS/StyleSheet.css" rel="stylesheet" />
-    
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="pagina">
+        <div id="pagina">
 
-          <div id="logo">
-             
-		               
-	            </div>
-	            <div  id="menu">
-                        <ul class="menu">
-                                 <li> <asp:LinkButton PostBackUrl="~/View/Default.aspx" ID="lnkInicio" runat="server">Inicio</asp:LinkButton></li>
-                                 <li> <asp:LinkButton PostBackUrl="" ID="lnkProcedimientos" runat="server">Procedimientos</asp:LinkButton></li>
-                                 <li> <asp:LinkButton PostBackUrl="" ID="lnkProductos" runat="server">Productos</asp:LinkButton></li>
-        				         <li> <asp:LinkButton PostBackUrl="" ID="lnkPromociones" runat="server">Promociones</asp:LinkButton></li>
-                                 <li> <asp:LinkButton PostBackUrl="" ID="lnkCitas" runat="server">Citas</asp:LinkButton></li>
-                                 <li> <asp:LinkButton PostBackUrl="" ID="lnkContactenos" runat="server">Cont&aacute;ctenos</asp:LinkButton></li>
-                                 <li> <asp:LinkButton PostBackUrl="" ID="lnkRegistros" runat="server">Registros</asp:LinkButton>
-                                
-        				     
-        					            <ul  class="submenu">
-                                                 <li> <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroClientes.aspx" ID="lnkRegistroClientes" runat="server">Registro de Clientes</asp:LinkButton></li>
-                                                <br></br>
-                                                <li><asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkRegitroProcedimientos" runat="server">Regitro de Procedimientos</asp:LinkButton></li>
-                                                <br></br>
-        						                <li><asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkRegistroCitas" runat="server">Registro de Citas</asp:LinkButton></li>
-                                                <br></br>
-                                                <li><asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkRegistroProductos" runat="server">Registro de Productos</asp:LinkButton></li>
-        					            </ul>
-        				        
-        				       </li> 
-                                <li><asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkFacturacion" runat="server">Facturaci&oacute;n</asp:LinkButton></li>
-                                <li><asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkReportes" runat="server">Reportes</asp:LinkButton></li>
-                         </ul>
+            <div id="logo"></div>
+            <div id="menu">
+                <ul class="menu">
+                    <li>
+                        <asp:LinkButton PostBackUrl="~/View/Default.aspx" ID="lnkInicio" runat="server">Inicio</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="~/View/Procedimientos.aspx" ID="lnkProcedimientos" runat="server">Procedimientos</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="~/View/Productos.aspx" ID="lnkProductos" runat="server">Productos</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="~/View/Promociones.aspx" ID="lnkPromociones" runat="server">Promociones</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="~/View/Citas.aspx" ID="lnkCitas" runat="server">Citas</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="~/View/Contactenos.aspx" ID="lnkContactenos" runat="server">Cont&aacute;ctenos</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="" ID="lnkRegistros" runat="server">Registros</asp:LinkButton>
 
-                 <asp:ContentPlaceHolder ID="head" runat="server">
-                        
-                   </asp:ContentPlaceHolder>
-	            </div>
-	                        <div  id="img">
-                                 <div id="content">
-                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
-                                                 </asp:ContentPlaceHolder>
-                                 </div>
+                        <ul class="submenu">
+                            <li>
+                                <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroClientes.aspx" ID="lnkRegistroClientes" runat="server">Registro de Clientes</asp:LinkButton></li>
+                            <br></br>
+                            <li>
+                                <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkRegitroProcedimientos" runat="server">Regitro de Procedimientos</asp:LinkButton></li>
+                            <br></br>
+                            <li>
+                                <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroCitas.aspx" ID="lnkRegistroCitas" runat="server">Registro de Citas</asp:LinkButton></li>
+                            <br></br>
+                            <li>
+                                <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProductos.aspx" ID="lnkRegistroProductos" runat="server">Registro de Productos</asp:LinkButton></li>
+                        </ul>
 
-                             </div>
-		             
-                            
+                    </li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkFacturacion" runat="server">Facturaci&oacute;n</asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton PostBackUrl="http://localhost:44805/View/ZonaAdministrador/RegistroProcedimientos.aspx" ID="lnkReportes" runat="server">Reportes</asp:LinkButton></li>
+                </ul>
 
-		         
-	            <div  id="footer">
-	            </div>
-        
-    </div>
+                <asp:ContentPlaceHolder ID="head" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div id="footer">
+            </div>
+
+        </div>
     </form>
 </body>
 </html>

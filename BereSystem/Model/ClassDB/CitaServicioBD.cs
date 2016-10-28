@@ -150,7 +150,9 @@ namespace BereSystem.Model.ClassDB
                 citaServ.numCita = int.Parse(dr[0].ToString());
                 citaServ.dia = DateTime.Parse(dr[1].ToString());
                 citaServ.usuario = Guid.Parse(dr[2].ToString());
-                citaServ.servicio = int.Parse(dr[3].ToString());
+                Servicio servicio1 = new Servicio();
+                servicio1.codigo = int.Parse(dr[3].ToString());
+                citaServ.servicio = servicio1;
                 citaServ.hora = int.Parse(dr[4].ToString());
                 citaServ.duracionMinutos = int.Parse(dr[5].ToString());
                 citaServ.estado = int.Parse(dr[6].ToString());

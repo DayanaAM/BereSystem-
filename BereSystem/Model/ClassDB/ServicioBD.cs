@@ -11,7 +11,20 @@ namespace BereSystem.Model.ClassDB
 {
     public class ServicioBD
     {
-
+        public string consecutivo()
+        {
+            string sql = "Select codigo+1 from Servicio where codigo= (SELECT MAX(codigo )  FROM Servicio)";
+            string consec = "";
+            try
+            {
+                consec = AccesoDatos.getInstance().EjecutarSQLScalar(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return consec;
+        }
 
         public int agregarServicio(Servicio servicio)
         {
@@ -147,8 +160,12 @@ namespace BereSystem.Model.ClassDB
                 dr.Read();
                 servicio.codigo = int.Parse(dr[0].ToString());
                 servicio.nombre= dr[1].ToString();
-                servicio.categoria = int.Parse(dr[2].ToString());
-                servicio.zona = int.Parse(dr[3].ToString());
+                Categoria categoria = new Categoria();
+                categoria.codigo=int.Parse(dr[2].ToString());
+                servicio.categoria = categoria;
+                ZonaTratamiento zona = new ZonaTratamiento();
+                zona.codigo=int.Parse(dr[3].ToString());
+                servicio.zona = zona;
                 servicio.precio = int.Parse(dr[4].ToString());
                 servicio.tipoServicio = int.Parse(dr[5].ToString());
                 servicio.duracionMinutos = int.Parse(dr[6].ToString());

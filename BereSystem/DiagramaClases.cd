@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BereSystem.Model.Class.Categoria">
+    <Position X="13.5" Y="0.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\Categoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BereSystem.Model.Class.Cita">
+    <Position X="1.25" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Horario" Type="BereSystem.Model.Class.Horario" ManuallyRouted="true">
+      <Path>
+        <Point X="3" Y="1.72" />
+        <Point X="3.75" Y="1.72" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Estado" Type="BereSystem.Model.Class.Estado" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="3.077" />
+        <Point X="4.375" Y="3.077" />
+        <Point X="4.375" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAACAQAACAAAAAAAAAAAAAAAAAgRACAIAAAAAAAAAg=</HashCode>
+      <FileName>Model\Class\Cita.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Horario" />
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.CitaServicio">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Estado" Type="BereSystem.Model.Class.Estado" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="3.209" />
+        <Point X="8" Y="3.75" />
+        <Point X="6.25" Y="3.75" />
+        <Point X="6.25" Y="4.5" />
+        <Point X="5" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>wAAACIAAACAAAAAAAAAAAAAAAAAAAARABAAAAAAAAAg=</HashCode>
+      <FileName>Model\Class\CitaServicio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Servicio" />
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.DetalleFactura">
+    <Position X="5.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>gQAACAAAAABAAAAAQAAAAAAAAAAAEAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\DetalleFactura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Producto" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.DiaHora">
+    <Position X="1.75" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAg=</HashCode>
+      <FileName>Model\Class\DiaHora.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.Estado">
+    <Position X="3.75" Y="4.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BereSystem.Model.Class.Factura">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAQAAAAAAAAAQAAAAgAAAEAIAAAAAAAAAAAg=</HashCode>
+      <FileName>Model\Class\Factura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.Horario">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <AssociationLine Name="Estado" Type="BereSystem.Model.Class.Estado">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.765" Y="0.39" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Model\Class\Horario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.Producto">
+    <Position X="11.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AQABCAAAAAAAAACgAAAAIAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\Producto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Categoria" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.Servicio">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABCAAAAAAAAACgAIAAIACAAQAAEAAABAAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\Servicio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Categoria" />
+      <Property Name="TipoServicio" />
+      <Property Name="ZonaTratamiento" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BereSystem.Model.Class.TipoServicio">
+    <Position X="12" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\TipoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BereSystem.Model.Class.ZonaTratamiento">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Class\ZonaTratamiento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

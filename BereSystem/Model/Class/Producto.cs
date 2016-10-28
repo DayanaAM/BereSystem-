@@ -14,6 +14,17 @@ namespace BereSystem.Model.Class
         public int precio { get; set; }
         public int estado { get; set; }
 
+        public Categoria Categoria
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public Producto() { }
 
         public Producto(int codigo,string nombre,int cantidad,int categoria, int precio,int estado)

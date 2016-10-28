@@ -17,6 +17,28 @@ namespace BereSystem.Model.Class
         public int cantidadTotalMin { get; set; }
         public int estado { get; set; }
 
+        public Horario Horario
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Estado Estado
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         
         public Cita() { }
 

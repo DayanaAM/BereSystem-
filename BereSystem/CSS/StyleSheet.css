@@ -20,9 +20,9 @@
 	height: 100px;  
 }
 #menu {
-	height: 50px;
-    margin-right: 2%;
-	margin-left: 2%;
+    height: 50px;
+    margin-right: inherit;
+	margin-left:inherit;
 }
 
 #footer {
@@ -30,6 +30,11 @@
 	height: 150px;
 }
 
+.registro {
+    margin-left:80%;
+    height: 860px;
+    width: 260px;
+}
 .menu {
 	height: 25px;
 	}

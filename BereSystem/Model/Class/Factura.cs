@@ -14,6 +14,17 @@ namespace BereSystem.Model.Class
         public int montoTotal { get; set; }
         public int estado { get; set; }
 
+        public Estado Estado
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public Factura() { }
 
         public Factura(int numFactura, DateTime fecha,Guid cliente, int descuento, int montoTotal, int estado)

@@ -33,8 +33,8 @@ namespace BereSystem.DAO
         public void establecerConexion()
         {
 
-            String hileraConexion = @"Data Source=localhost" +
-                                    ";Initial Catalog=aspnetdb" +
+            String hileraConexion = @"Data Source=AVILA-PC\SA" +
+                                    ";Initial Catalog=bereSystem" +
                                     ";User ID=sa" +
                                     ";Password=123456";
 

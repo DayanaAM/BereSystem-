@@ -39,6 +39,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -62,9 +64,21 @@
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo1.jpg" />
     <Content Include="images\logoBanner.png" />
+    <Content Include="Service References\Services\WebServiceBereSystem.disco" />
+    <Content Include="Service References\Services\configuration91.svcinfo" />
+    <Content Include="Service References\Services\configuration.svcinfo" />
+    <Content Include="Service References\Services\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <Content Include="View\changePassword.aspx" />
+    <Content Include="View\Citas.aspx" />
+    <Content Include="View\Contactenos.aspx" />
     <Content Include="View\Default.aspx" />
     <Content Include="images\spa.jpg" />
+    <Content Include="View\Procedimientos.aspx" />
+    <Content Include="View\Productos.aspx" />
+    <Content Include="View\Promociones.aspx" />
     <Content Include="View\singIn.aspx" />
     <Content Include="View\ZonaAdministrador\RegistroCitas.aspx" />
     <Content Include="View\ZonaAdministrador\RegistroClientes.aspx" />
@@ -101,12 +115,31 @@
     <Compile Include="Model\Class\Servicio.cs" />
     <Compile Include="Model\Class\TipoServicio.cs" />
     <Compile Include="Model\Class\ZonaTratamiento.cs" />
+    <Compile Include="Service References\Services\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="View\changePassword.aspx.cs">
       <DependentUpon>changePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\changePassword.aspx.designer.cs">
       <DependentUpon>changePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Citas.aspx.cs">
+      <DependentUpon>Citas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Citas.aspx.designer.cs">
+      <DependentUpon>Citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Contactenos.aspx.cs">
+      <DependentUpon>Contactenos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Contactenos.aspx.designer.cs">
+      <DependentUpon>Contactenos.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -123,6 +156,27 @@
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Procedimientos.aspx.cs">
+      <DependentUpon>Procedimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Procedimientos.aspx.designer.cs">
+      <DependentUpon>Procedimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Promociones.aspx.cs">
+      <DependentUpon>Promociones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Promociones.aspx.designer.cs">
+      <DependentUpon>Promociones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\singIn.aspx.cs">
       <DependentUpon>singIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +219,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
+    <Content Include="DiagramaClases.cd" />
+    <Content Include="Service References\Services\WebServiceBereSystem.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,7 +228,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Services\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

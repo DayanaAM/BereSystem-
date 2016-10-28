@@ -15,6 +15,17 @@ namespace BereSystem.Model.Class
         public int total { get; set; }
         public int estado { get; set; }
 
+        public Producto Producto
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public DetalleFactura() { }
 
         public DetalleFactura(int numFactura,int producto, int servicio, int precio, int cantidad, int total, int estado) 

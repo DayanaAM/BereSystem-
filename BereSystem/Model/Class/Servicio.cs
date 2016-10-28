@@ -9,16 +9,28 @@ namespace BereSystem.Model.Class
     {
         public int codigo { get; set; }
         public string nombre { get; set; }
-        public int categoria { get; set; }
-        public int zona { get; set; }
+        public Categoria categoria { get; set; }
+        public ZonaTratamiento zona { get; set; }
         public int precio { get; set; }
         public int tipoServicio { get; set; }
         public int duracionMinutos { get; set; }
         public int estado { get; set; }
 
+       
+        public ZonaTratamiento ZonaTratamiento
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public Servicio() { }
 
-        public Servicio(int codigo, string nombre, int categoria,int zona, int precio,int tipoServicio, int duracionMinutos, int estado)
+        public Servicio(int codigo, string nombre, Categoria categoria,ZonaTratamiento zona, int precio,int tipoServicio, int duracionMinutos, int estado)
         {
             this.codigo = codigo;
             this.nombre = nombre;

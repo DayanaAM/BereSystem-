@@ -11,7 +11,7 @@ namespace BereSystem
     /// <summary>
     /// Descripción breve de WebServiceBereSystem
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://localhost/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // Para permitir que se llame a este servicio web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
@@ -144,7 +144,7 @@ namespace BereSystem
 
         //*****************************************************Servicio ***********************************************************************
         [WebMethod]
-        public int insertaServicio(string nombre,int categoria,int zona, int precio,int tipoServicio, int duracionMinutos, int estado)
+        public int insertaServicio(string nombre,Categoria categoria,ZonaTratamiento zona, int precio,int tipoServicio, int duracionMinutos, int estado)
         {
             int codigo = 0;
             Servicio servicio = new Servicio(codigo, nombre, categoria, zona, precio, tipoServicio, duracionMinutos, estado);
@@ -162,7 +162,7 @@ namespace BereSystem
         }
 
         [WebMethod]
-        public int modificaServicio(int codigo, string nombre, int categoria, int zona, int precio, int tipoServicio, int duracionMinutos, int estado)
+        public int modificaServicio(int codigo, string nombre,Categoria categoria,ZonaTratamiento zona, int precio,int tipoServicio, int duracionMinutos, int estado)
         {
             Servicio servicio = new Servicio(codigo, nombre, categoria, zona, precio, tipoServicio, duracionMinutos, estado);
             ServicioBD servBD = new ServicioBD();
@@ -534,7 +534,7 @@ namespace BereSystem
 
         //*****************************************************Cita_Servicio***************************************************
         [WebMethod]
-        public int insertaCitaServicio(int numCita, DateTime dia, Guid usuario, int servicio,int hora, int duracionMinutos, int estado)
+        public int insertaCitaServicio(int numCita, DateTime dia, Guid usuario, Servicio servicio,int hora, int duracionMinutos, int estado)
         {
             CitaServicio citaServicio = new CitaServicio(numCita,dia,usuario,servicio,hora,duracionMinutos,estado);
             CitaServicioBD citaServicioBD = new CitaServicioBD();
@@ -552,7 +552,7 @@ namespace BereSystem
 
 
         [WebMethod]
-        public int modificaCitaServicio(int numCita, DateTime dia, Guid usuario, int servicio, int hora, int duracionMinutos, int estado)
+        public int modificaCitaServicio(int numCita, DateTime dia, Guid usuario, Servicio servicio, int hora, int duracionMinutos, int estado)
         {
             CitaServicio citaServicio = new CitaServicio(numCita, dia, usuario, servicio, hora, duracionMinutos, estado);
             CitaServicioBD citaServicioBD = new CitaServicioBD();
@@ -570,12 +570,13 @@ namespace BereSystem
         }
 
         [WebMethod]
-        public int eliminaCitaServicio(int numCita,DateTime dia,Guid usuario,int servicio,int estado)
+        public int eliminaCitaServicio(int numCita,DateTime dia,Guid usuario,Servicio servicio,int estado)
         {
             CitaServicio citaServicio = new CitaServicio();
             citaServicio.numCita = numCita;
             citaServicio.dia = dia;
             citaServicio.usuario = usuario;
+
             citaServicio.servicio = servicio;
             citaServicio.estado = estado;
             CitaServicioBD citaServicioBD = new CitaServicioBD();

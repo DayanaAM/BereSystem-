@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoria" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoria" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaProveedorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaCita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="horario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="horaInicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="horaFin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minutosDisponibles" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadTotalMin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaCitaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaCitaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaCita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numCita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="horario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="horaInicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="horaFin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minutosDisponibles" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadTotalMin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaCitaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaCitaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaCita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numCita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaCitaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaCitaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="categoria" type="tns:Categoria" />
+            <s:element minOccurs="0" maxOccurs="1" name="zona" type="tns:ZonaTratamiento" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="duracionMinutos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Categoria">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZonaTratamiento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertaServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="categoria" type="tns:Categoria" />
+            <s:element minOccurs="0" maxOccurs="1" name="zona" type="tns:ZonaTratamiento" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="duracionMinutos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaEstadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaEstadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaEstadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaHorario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaHorarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaHorarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaHorario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaHorarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaHorarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaHorario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaHorarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaHorarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaCategoriaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaCategoriaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaCategoria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaCategoriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaCategoriaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaZonaTratamiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaZonaTratamientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaZonaTratamientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaZonaTratamiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaZonaTratamientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaZonaTratamientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaZonaTratamiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaZonaTratamientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaZonaTratamientoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaTipoServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaTipoServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaTipoServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaTipoServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaTipoServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaTipoServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaTipoServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaTipoServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaTipoServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaDiaHora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="hora" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaDiaHoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaDiaHoraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaDiaHora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="hora" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaDiaHoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaDiaHoraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaDiaHora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="hora" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaDiaHoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaDiaHoraResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaCitaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numCita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuario" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicio" type="tns:Servicio" />
+            <s:element minOccurs="1" maxOccurs="1" name="hora" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="duracionMinutos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Servicio">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="categoria" type="tns:Categoria" />
+          <s:element minOccurs="0" maxOccurs="1" name="zona" type="tns:ZonaTratamiento" />
+          <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tipoServicio" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="duracionMinutos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZonaTratamiento" type="tns:ZonaTratamiento" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertaCitaServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaCitaServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaCitaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numCita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuario" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicio" type="tns:Servicio" />
+            <s:element minOccurs="1" maxOccurs="1" name="hora" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="duracionMinutos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaCitaServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaCitaServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaCitaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numCita" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dia" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuario" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicio" type="tns:Servicio" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaCitaServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaCitaServicioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="cliente" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="descuento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoTotal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaFacturaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numFactura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="cliente" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="descuento" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoTotal" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaFacturaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numFactura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="cliente" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaFacturaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaDetalleFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numFactura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="producto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="servicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaDetalleFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertaDetalleFacturaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaDetalleFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numFactura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="producto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="servicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaDetalleFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="modificaDetalleFacturaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaDetalleFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numFactura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="producto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="servicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaDetalleFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminaDetalleFacturaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaProducto" />
+  </wsdl:message>
+  <wsdl:message name="insertaProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaProveedor" />
+  </wsdl:message>
+  <wsdl:message name="modificaProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaProducto" />
+  </wsdl:message>
+  <wsdl:message name="eliminaProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaCitaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaCita" />
+  </wsdl:message>
+  <wsdl:message name="insertaCitaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaCitaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaCita" />
+  </wsdl:message>
+  <wsdl:message name="modificaCitaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaCitaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaCita" />
+  </wsdl:message>
+  <wsdl:message name="eliminaCitaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaServicio" />
+  </wsdl:message>
+  <wsdl:message name="insertaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaServicio" />
+  </wsdl:message>
+  <wsdl:message name="modificaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaServicio" />
+  </wsdl:message>
+  <wsdl:message name="eliminaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaEstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaEstado" />
+  </wsdl:message>
+  <wsdl:message name="insertaEstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaEstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaEstado" />
+  </wsdl:message>
+  <wsdl:message name="modificaEstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaEstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaEstado" />
+  </wsdl:message>
+  <wsdl:message name="eliminaEstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaHorarioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaHorario" />
+  </wsdl:message>
+  <wsdl:message name="insertaHorarioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaHorarioSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaHorario" />
+  </wsdl:message>
+  <wsdl:message name="modificaHorarioSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaHorarioSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaHorario" />
+  </wsdl:message>
+  <wsdl:message name="eliminaHorarioSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaHorarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaCategoria" />
+  </wsdl:message>
+  <wsdl:message name="insertaCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaCategoria" />
+  </wsdl:message>
+  <wsdl:message name="modificaCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaCategoriaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaCategoria" />
+  </wsdl:message>
+  <wsdl:message name="eliminaCategoriaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaZonaTratamientoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaZonaTratamiento" />
+  </wsdl:message>
+  <wsdl:message name="insertaZonaTratamientoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaZonaTratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaZonaTratamientoSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaZonaTratamiento" />
+  </wsdl:message>
+  <wsdl:message name="modificaZonaTratamientoSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaZonaTratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaZonaTratamientoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaZonaTratamiento" />
+  </wsdl:message>
+  <wsdl:message name="eliminaZonaTratamientoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaZonaTratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaTipoServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="insertaTipoServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaTipoServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="modificaTipoServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaTipoServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaTipoServicio" />
+  </wsdl:message>
+  <wsdl:message name="eliminaTipoServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaTipoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaDiaHoraSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaDiaHora" />
+  </wsdl:message>
+  <wsdl:message name="insertaDiaHoraSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaDiaHoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaDiaHoraSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaDiaHora" />
+  </wsdl:message>
+  <wsdl:message name="modificaDiaHoraSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaDiaHoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaDiaHoraSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaDiaHora" />
+  </wsdl:message>
+  <wsdl:message name="eliminaDiaHoraSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaDiaHoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaCitaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaCitaServicio" />
+  </wsdl:message>
+  <wsdl:message name="insertaCitaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaCitaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaCitaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaCitaServicio" />
+  </wsdl:message>
+  <wsdl:message name="modificaCitaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaCitaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaCitaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaCitaServicio" />
+  </wsdl:message>
+  <wsdl:message name="eliminaCitaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaCitaServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaFactura" />
+  </wsdl:message>
+  <wsdl:message name="insertaFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaFactura" />
+  </wsdl:message>
+  <wsdl:message name="modificaFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaFactura" />
+  </wsdl:message>
+  <wsdl:message name="eliminaFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaDetalleFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaDetalleFactura" />
+  </wsdl:message>
+  <wsdl:message name="insertaDetalleFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaDetalleFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaDetalleFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaDetalleFactura" />
+  </wsdl:message>
+  <wsdl:message name="modificaDetalleFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaDetalleFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaDetalleFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaDetalleFactura" />
+  </wsdl:message>
+  <wsdl:message name="eliminaDetalleFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaDetalleFacturaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceBereSystemSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaProducto">
+      <wsdl:input message="tns:insertaProductoSoapIn" />
+      <wsdl:output message="tns:insertaProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaProveedor">
+      <wsdl:input message="tns:modificaProveedorSoapIn" />
+      <wsdl:output message="tns:modificaProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaProducto">
+      <wsdl:input message="tns:eliminaProductoSoapIn" />
+      <wsdl:output message="tns:eliminaProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaCita">
+      <wsdl:input message="tns:insertaCitaSoapIn" />
+      <wsdl:output message="tns:insertaCitaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaCita">
+      <wsdl:input message="tns:modificaCitaSoapIn" />
+      <wsdl:output message="tns:modificaCitaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCita">
+      <wsdl:input message="tns:eliminaCitaSoapIn" />
+      <wsdl:output message="tns:eliminaCitaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaServicio">
+      <wsdl:input message="tns:insertaServicioSoapIn" />
+      <wsdl:output message="tns:insertaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaServicio">
+      <wsdl:input message="tns:modificaServicioSoapIn" />
+      <wsdl:output message="tns:modificaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaServicio">
+      <wsdl:input message="tns:eliminaServicioSoapIn" />
+      <wsdl:output message="tns:eliminaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaEstado">
+      <wsdl:input message="tns:insertaEstadoSoapIn" />
+      <wsdl:output message="tns:insertaEstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaEstado">
+      <wsdl:input message="tns:modificaEstadoSoapIn" />
+      <wsdl:output message="tns:modificaEstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaEstado">
+      <wsdl:input message="tns:eliminaEstadoSoapIn" />
+      <wsdl:output message="tns:eliminaEstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaHorario">
+      <wsdl:input message="tns:insertaHorarioSoapIn" />
+      <wsdl:output message="tns:insertaHorarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaHorario">
+      <wsdl:input message="tns:modificaHorarioSoapIn" />
+      <wsdl:output message="tns:modificaHorarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaHorario">
+      <wsdl:input message="tns:eliminaHorarioSoapIn" />
+      <wsdl:output message="tns:eliminaHorarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaCategoria">
+      <wsdl:input message="tns:insertaCategoriaSoapIn" />
+      <wsdl:output message="tns:insertaCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaCategoria">
+      <wsdl:input message="tns:modificaCategoriaSoapIn" />
+      <wsdl:output message="tns:modificaCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCategoria">
+      <wsdl:input message="tns:eliminaCategoriaSoapIn" />
+      <wsdl:output message="tns:eliminaCategoriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaZonaTratamiento">
+      <wsdl:input message="tns:insertaZonaTratamientoSoapIn" />
+      <wsdl:output message="tns:insertaZonaTratamientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaZonaTratamiento">
+      <wsdl:input message="tns:modificaZonaTratamientoSoapIn" />
+      <wsdl:output message="tns:modificaZonaTratamientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaZonaTratamiento">
+      <wsdl:input message="tns:eliminaZonaTratamientoSoapIn" />
+      <wsdl:output message="tns:eliminaZonaTratamientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaTipoServicio">
+      <wsdl:input message="tns:insertaTipoServicioSoapIn" />
+      <wsdl:output message="tns:insertaTipoServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaTipoServicio">
+      <wsdl:input message="tns:modificaTipoServicioSoapIn" />
+      <wsdl:output message="tns:modificaTipoServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaTipoServicio">
+      <wsdl:input message="tns:eliminaTipoServicioSoapIn" />
+      <wsdl:output message="tns:eliminaTipoServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaDiaHora">
+      <wsdl:input message="tns:insertaDiaHoraSoapIn" />
+      <wsdl:output message="tns:insertaDiaHoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaDiaHora">
+      <wsdl:input message="tns:modificaDiaHoraSoapIn" />
+      <wsdl:output message="tns:modificaDiaHoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaDiaHora">
+      <wsdl:input message="tns:eliminaDiaHoraSoapIn" />
+      <wsdl:output message="tns:eliminaDiaHoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaCitaServicio">
+      <wsdl:input message="tns:insertaCitaServicioSoapIn" />
+      <wsdl:output message="tns:insertaCitaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaCitaServicio">
+      <wsdl:input message="tns:modificaCitaServicioSoapIn" />
+      <wsdl:output message="tns:modificaCitaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCitaServicio">
+      <wsdl:input message="tns:eliminaCitaServicioSoapIn" />
+      <wsdl:output message="tns:eliminaCitaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaFactura">
+      <wsdl:input message="tns:insertaFacturaSoapIn" />
+      <wsdl:output message="tns:insertaFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaFactura">
+      <wsdl:input message="tns:modificaFacturaSoapIn" />
+      <wsdl:output message="tns:modificaFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaFactura">
+      <wsdl:input message="tns:eliminaFacturaSoapIn" />
+      <wsdl:output message="tns:eliminaFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaDetalleFactura">
+      <wsdl:input message="tns:insertaDetalleFacturaSoapIn" />
+      <wsdl:output message="tns:insertaDetalleFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaDetalleFactura">
+      <wsdl:input message="tns:modificaDetalleFacturaSoapIn" />
+      <wsdl:output message="tns:modificaDetalleFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaDetalleFactura">
+      <wsdl:input message="tns:eliminaDetalleFacturaSoapIn" />
+      <wsdl:output message="tns:eliminaDetalleFacturaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceBereSystemSoap" type="tns:WebServiceBereSystemSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://localhost/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaProducto">
+      <soap:operation soapAction="http://localhost/insertaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaProveedor">
+      <soap:operation soapAction="http://localhost/modificaProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaProducto">
+      <soap:operation soapAction="http://localhost/eliminaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaCita">
+      <soap:operation soapAction="http://localhost/insertaCita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaCita">
+      <soap:operation soapAction="http://localhost/modificaCita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCita">
+      <soap:operation soapAction="http://localhost/eliminaCita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaServicio">
+      <soap:operation soapAction="http://localhost/insertaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaServicio">
+      <soap:operation soapAction="http://localhost/modificaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaServicio">
+      <soap:operation soapAction="http://localhost/eliminaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaEstado">
+      <soap:operation soapAction="http://localhost/insertaEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaEstado">
+      <soap:operation soapAction="http://localhost/modificaEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaEstado">
+      <soap:operation soapAction="http://localhost/eliminaEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaHorario">
+      <soap:operation soapAction="http://localhost/insertaHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaHorario">
+      <soap:operation soapAction="http://localhost/modificaHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaHorario">
+      <soap:operation soapAction="http://localhost/eliminaHorario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaCategoria">
+      <soap:operation soapAction="http://localhost/insertaCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaCategoria">
+      <soap:operation soapAction="http://localhost/modificaCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCategoria">
+      <soap:operation soapAction="http://localhost/eliminaCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaZonaTratamiento">
+      <soap:operation soapAction="http://localhost/insertaZonaTratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaZonaTratamiento">
+      <soap:operation soapAction="http://localhost/modificaZonaTratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaZonaTratamiento">
+      <soap:operation soapAction="http://localhost/eliminaZonaTratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaTipoServicio">
+      <soap:operation soapAction="http://localhost/insertaTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaTipoServicio">
+      <soap:operation soapAction="http://localhost/modificaTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaTipoServicio">
+      <soap:operation soapAction="http://localhost/eliminaTipoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaDiaHora">
+      <soap:operation soapAction="http://localhost/insertaDiaHora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaDiaHora">
+      <soap:operation soapAction="http://localhost/modificaDiaHora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaDiaHora">
+      <soap:operation soapAction="http://localhost/eliminaDiaHora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaCitaServicio">
+      <soap:operation soapAction="http://localhost/insertaCitaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaCitaServicio">
+      <soap:operation soapAction="http://localhost/modificaCitaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCitaServicio">
+      <soap:operation soapAction="http://localhost/eliminaCitaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaFactura">
+      <soap:operation soapAction="http://localhost/insertaFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaFactura">
+      <soap:operation soapAction="http://localhost/modificaFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaFactura">
+      <soap:operation soapAction="http://localhost/eliminaFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaDetalleFactura">
+      <soap:operation soapAction="http://localhost/insertaDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaDetalleFactura">
+      <soap:operation soapAction="http://localhost/modificaDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaDetalleFactura">
+      <soap:operation soapAction="http://localhost/eliminaDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceBereSystemSoap12" type="tns:WebServiceBereSystemSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://localhost/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaProducto">
+      <soap12:operation soapAction="http://localhost/insertaProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaProveedor">
+      <soap12:operation soapAction="http://localhost/modificaProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaProducto">
+      <soap12:operation soapAction="http://localhost/eliminaProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaCita">
+      <soap12:operation soapAction="http://localhost/insertaCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaCita">
+      <soap12:operation soapAction="http://localhost/modificaCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCita">
+      <soap12:operation soapAction="http://localhost/eliminaCita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaServicio">
+      <soap12:operation soapAction="http://localhost/insertaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaServicio">
+      <soap12:operation soapAction="http://localhost/modificaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaServicio">
+      <soap12:operation soapAction="http://localhost/eliminaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaEstado">
+      <soap12:operation soapAction="http://localhost/insertaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaEstado">
+      <soap12:operation soapAction="http://localhost/modificaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaEstado">
+      <soap12:operation soapAction="http://localhost/eliminaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaHorario">
+      <soap12:operation soapAction="http://localhost/insertaHorario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaHorario">
+      <soap12:operation soapAction="http://localhost/modificaHorario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaHorario">
+      <soap12:operation soapAction="http://localhost/eliminaHorario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaCategoria">
+      <soap12:operation soapAction="http://localhost/insertaCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaCategoria">
+      <soap12:operation soapAction="http://localhost/modificaCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCategoria">
+      <soap12:operation soapAction="http://localhost/eliminaCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaZonaTratamiento">
+      <soap12:operation soapAction="http://localhost/insertaZonaTratamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaZonaTratamiento">
+      <soap12:operation soapAction="http://localhost/modificaZonaTratamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaZonaTratamiento">
+      <soap12:operation soapAction="http://localhost/eliminaZonaTratamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaTipoServicio">
+      <soap12:operation soapAction="http://localhost/insertaTipoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaTipoServicio">
+      <soap12:operation soapAction="http://localhost/modificaTipoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaTipoServicio">
+      <soap12:operation soapAction="http://localhost/eliminaTipoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaDiaHora">
+      <soap12:operation soapAction="http://localhost/insertaDiaHora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaDiaHora">
+      <soap12:operation soapAction="http://localhost/modificaDiaHora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaDiaHora">
+      <soap12:operation soapAction="http://localhost/eliminaDiaHora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaCitaServicio">
+      <soap12:operation soapAction="http://localhost/insertaCitaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaCitaServicio">
+      <soap12:operation soapAction="http://localhost/modificaCitaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaCitaServicio">
+      <soap12:operation soapAction="http://localhost/eliminaCitaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaFactura">
+      <soap12:operation soapAction="http://localhost/insertaFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaFactura">
+      <soap12:operation soapAction="http://localhost/modificaFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaFactura">
+      <soap12:operation soapAction="http://localhost/eliminaFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaDetalleFactura">
+      <soap12:operation soapAction="http://localhost/insertaDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaDetalleFactura">
+      <soap12:operation soapAction="http://localhost/modificaDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaDetalleFactura">
+      <soap12:operation soapAction="http://localhost/eliminaDetalleFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceBereSystem">
+    <wsdl:port name="WebServiceBereSystemSoap" binding="tns:WebServiceBereSystemSoap">
+      <soap:address location="http://localhost:44805/WebServiceBereSystem.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceBereSystemSoap12" binding="tns:WebServiceBereSystemSoap12">
+      <soap12:address location="http://localhost:44805/WebServiceBereSystem.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

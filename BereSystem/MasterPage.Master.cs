@@ -17,12 +17,16 @@ namespace BereSystem
                 //LinkButton link = (LinkButton)LoginView1FindControl("lnkRegistros");
                 //link.Visible = true;
                 lnkRegistros.Visible = true;
+                lnkFacturacion.Visible = true;
+                lnkReportes.Visible = true;
                
 
             }
             else
             {
                 lnkRegistros.Visible = false;
+                lnkFacturacion.Visible =false;
+                lnkReportes.Visible = false;
 
             }
         }

@@ -12,6 +12,17 @@ namespace BereSystem.Model.Class
         public int hora { get; set; }
         public int estado { get; set; }
 
+        public Estado Estado
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public DiaHora() { }
 
         public DiaHora(DateTime dia,int hora, int estado)
